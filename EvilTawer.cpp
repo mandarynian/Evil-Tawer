@@ -2,9 +2,9 @@
 
 #include "stdafx.h"
 #include "Hero.h"
-#include "ogolnie.h"
+#include "resource.h"
 #include "Monster.h"
-// funckja g³ówna odpalaj¹ca program
+// funckja gï¿½ï¿½wna odpalajï¿½ca program
 int main() {	
 	cout << "Witam w grze RPG! Evil Tower" << endl;
 	system("pause");

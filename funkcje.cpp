@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "ogolnie.h"
+#include "resource.h"
 #include "Hero.h"
 #include "Monster.h"
 #include "Quest.h"
@@ -9,7 +9,7 @@ int hp_monster;
 int visited = 0, visited2 = 0;
 //void fight(Hero &hero, Monster &monster);
 
-//funkcje ogólnego urzytku 
+//funkcje ogï¿½lnego urzytku 
 void menu() {
 
 	char wybor;
@@ -52,30 +52,30 @@ int pomoc() {
 	char wb;
 	setlocale(LC_ALL, "polish");
 	for (;;) {
-		cout << "Pomoc! \n1. Postacie \n2. O grze \n3. Powrót" << endl;
+		cout << "Pomoc! \n1. Postacie \n2. O grze \n3. Powrï¿½t" << endl;
 
 		wb = _getch();
 		system("cls");
 		switch (wb) {
 		case '1':
 			cout << "Wojownik. \nSilny odporny na ataki fizyczny posiadajacy duzo pancerza." << endl;
-			cout << "Niestety posiada znacznie mniej zrêcznoœci co powoduje, \n¿e wyprowadzane ataki maj¹ mniejszy stopieñ trafienia." << endl;
-			cout << "G³ównym atutem wojownika jest drugi jego skill \nPozwala on uderzyæ z czterokrotn¹ si³¹ przeciwnika!" << endl;
-			cout<<endl << "Zabojca. \nSzybki, posiadaj¹cy niesamowit¹ zwinnoœæ \nPosiada o wiele mniejsze obra¿enia aczkolwiek jest w stanie wyprowadzaæ je czêœciej" << endl;
-			cout << "G³ównym atutem tej postaci jest jego skill zapewniaj¹cy potrujny atak \nNiestety jest on równie¿ obarczony d³ugim czasem regeneracji!" << endl;
-			cout << endl << "Paladyn. \nNiestety w obecnym stanie gry postaæ niedokoñczona \nNie polecam nim graæ." << endl;
-			cout << "W kolejnym patchu bêdzie rozbudowywana"<<endl;
+			cout << "Niestety posiada znacznie mniej zrï¿½cznoï¿½ci co powoduje, \nï¿½e wyprowadzane ataki majï¿½ mniejszy stopieï¿½ trafienia." << endl;
+			cout << "Gï¿½ï¿½wnym atutem wojownika jest drugi jego skill \nPozwala on uderzyï¿½ z czterokrotnï¿½ siï¿½ï¿½ przeciwnika!" << endl;
+			cout<<endl << "Zabojca. \nSzybki, posiadajï¿½cy niesamowitï¿½ zwinnoï¿½ï¿½ \nPosiada o wiele mniejsze obraï¿½enia aczkolwiek jest w stanie wyprowadzaï¿½ je czï¿½ciej" << endl;
+			cout << "Gï¿½ï¿½wnym atutem tej postaci jest jego skill zapewniajï¿½cy potrujny atak \nNiestety jest on rï¿½wnieï¿½ obarczony dï¿½ugim czasem regeneracji!" << endl;
+			cout << endl << "Paladyn. \nNiestety w obecnym stanie gry postaï¿½ niedokoï¿½czona \nNie polecam nim graï¿½." << endl;
+			cout << "W kolejnym patchu bï¿½dzie rozbudowywana"<<endl;
 			system("pause");
 			system("cls");
 			break;
 		case '2':
-			cout << "W grze g³ównym zadaniem jest pod¹¿aæ za w¹tkiem fabularnym \nJest to wersja demonstracyjna w przysz³oœci zostan¹ dodane nowe usprawnienia \nTrzy a obecnie dwie postaci, \ndaj¹ mo¿liwoœæ poznania œwiata w którym przyjdzie nam stawiæ czo³a niebespiecznym przygod¹!" << endl;
+			cout << "W grze gï¿½ï¿½wnym zadaniem jest podï¿½ï¿½aï¿½ za wï¿½tkiem fabularnym \nJest to wersja demonstracyjna w przyszï¿½oï¿½ci zostanï¿½ dodane nowe usprawnienia \nTrzy a obecnie dwie postaci, \ndajï¿½ moï¿½liwoï¿½ï¿½ poznania ï¿½wiata w ktï¿½rym przyjdzie nam stawiï¿½ czoï¿½a niebespiecznym przygodï¿½!" << endl;
 			system("pause");
 			system("cls");
 			break;
 		case '3':
 			system("cls");
-			cout << "Nast¹pi powrót do menu..." << endl;
+			cout << "Nastï¿½pi powrï¿½t do menu..." << endl;
 			return main();
 		default:
 			cout << "Nie poprawny wybor!!" << endl;
@@ -90,17 +90,17 @@ void wprowadzenie() {
 	setlocale(LC_ALL, "polish");
 	system("pause");
 	system("cls");
-	cout << "Podró¿ trwa ju¿ kilka miesiecy od k¹d opóœci³em rodzinne wschodnie stepy" << endl;
-	cout << "Choroba morska stala sie zaledwie wspomnieniem pocz¹tków tej trudnej podró¿y \nale to jak i sprz¹tanie pok³adu dzien w dzien bylo neiwielk¹ cen¹ jak na tak \ndalek¹ wyprawê." << endl;
-	cout << "Dziœ stojê z usmiechem na twarzy obserwójac jak powoli statek cumuje w zatoce. \nCieply klimat i piekna pogoda sprawia ze ta kraina wydaje byc sie rajem." << endl;
+	cout << "Podrï¿½ trwa juï¿½ kilka miesiecy od kï¿½d opï¿½ciï¿½em rodzinne wschodnie stepy" << endl;
+	cout << "Choroba morska stala sie zaledwie wspomnieniem poczï¿½tkï¿½w tej trudnej podrï¿½y \nale to jak i sprzï¿½tanie pokï¿½adu dzien w dzien bylo neiwielkï¿½ cenï¿½ jak na tak \ndalekï¿½ wyprawï¿½." << endl;
+	cout << "Dziï¿½ stojï¿½ z usmiechem na twarzy obserwï¿½jac jak powoli statek cumuje w zatoce. \nCieply klimat i piekna pogoda sprawia ze ta kraina wydaje byc sie rajem." << endl;
 	system("pause");
 	system("cls");
-	cout << "Po przybiciu do brzegu kazano mi udac sie do stra¿nika w celnicy \naby sie zameldowaæ." << endl;
-	cout << "Wygl¹d dzielnicy portowej przyozdabia krz¹tanina tragarzy, \nktórzy wij¹ siê swoimi scie¿kami by dostarczyæ na czas \nbezcenne dla ich w³aœcicieli produkty. \nGwar wszystko ogarniaj¹cy sieje zamêt w zmys³ach \nby ju¿ po chwili obserwacji mo¿na by³o dostrzec piekno naturalnego porz¹dku \nNiczym w mrówczym kopcu, ka¿dy ma tu swoje zadanie..." << endl;
+	cout << "Po przybiciu do brzegu kazano mi udac sie do straï¿½nika w celnicy \naby sie zameldowaï¿½." << endl;
+	cout << "Wyglï¿½d dzielnicy portowej przyozdabia krzï¿½tanina tragarzy, \nktï¿½rzy wijï¿½ siï¿½ swoimi scieï¿½kami by dostarczyï¿½ na czas \nbezcenne dla ich wï¿½aï¿½cicieli produkty. \nGwar wszystko ogarniajï¿½cy sieje zamï¿½t w zmysï¿½ach \nby juï¿½ po chwili obserwacji moï¿½na byï¿½o dostrzec piekno naturalnego porzï¿½dku \nNiczym w mrï¿½wczym kopcu, kaï¿½dy ma tu swoje zadanie..." << endl;
 	system("pause");
 	system("cls");
-	cout << "Budynek w którym znajdowa³a siê celnica by³ dwupiêtrowy, mórowany \ndrzwi wielkie wzmacniane metalowymi okuciami"<<endl;
-	cout << "W œrodku czeka³ na mnie przy swym stoliku stra¿nik, który coœ skroba³ na kartce" << endl;
+	cout << "Budynek w ktï¿½rym znajdowaï¿½a siï¿½ celnica byï¿½ dwupiï¿½trowy, mï¿½rowany \ndrzwi wielkie wzmacniane metalowymi okuciami"<<endl;
+	cout << "W ï¿½rodku czekaï¿½ na mnie przy swym stoliku straï¿½nik, ktï¿½ry coï¿½ skrobaï¿½ na kartce" << endl;
 	system("pause");
 	system("cls");
 }
@@ -109,7 +109,7 @@ void droga(string n, int charakter) {
 	setlocale(LC_ALL, "polish");
 	char wb, wb2;
 	system("cls");
-	cout << "A wiec " << n << " powiedz mi co Ciê sprowadza do tej krainy?" << endl << endl;
+	cout << "A wiec " << n << " powiedz mi co Ciï¿½ sprowadza do tej krainy?" << endl << endl;
 	cout << "1. Znudzilo mi sie miejsce w ktorym zylem." << endl;
 	cout << "2. Poszukuje przygod i slawy" << endl;
 	cout << "3. Mam tu kilka spraw do zalatwienia" << endl;
@@ -146,76 +146,76 @@ void droga(string n, int charakter) {
 	default:break;
 	}
 	system("cls");
-	cout << "Jak d³ugo zamierzasz pozsotaæ tutaj?" << endl<<endl;
+	cout << "Jak dï¿½ugo zamierzasz pozsotaï¿½ tutaj?" << endl<<endl;
 	cout << "1. Nie jestem pewien" << endl;
-	cout << "2. Jakiœ czas" << endl;
-	cout << "3. Dopiero tu przyby³em muszê siê rozej¿eæ, wtedy postanowiê" << endl;
+	cout << "2. Jakiï¿½ czas" << endl;
+	cout << "3. Dopiero tu przybyï¿½em muszï¿½ siï¿½ rozejï¿½eï¿½, wtedy postanowiï¿½" << endl;
 
 	wb2 = _getch();
 	switch (wb2) {
 	case '1':
 		system("cls");
 		cout << "1. Nie jestem pewien" << endl<<endl;
-		cout << "Ah. Niezdecydowa³eœ jeszcze" << endl;
+		cout << "Ah. Niezdecydowaï¿½eï¿½ jeszcze" << endl;
 		break;
 	case '2':
 		system("cls");
-		cout << "2. Jakiœ czas" << endl<<endl;
+		cout << "2. Jakiï¿½ czas" << endl<<endl;
 		cout << "Yhmy..." << endl;
 		break;
 	case '3':
 		system("cls");
-		cout << "3. Dopiero tu przyby³em muszê siê rozej¿eæ, wtedy postanowiê" << endl<<endl;
-		cout << "Myœlê ¿e znajd¹ siê tu ciekawe rzeczy do zrobienia" << endl;
+		cout << "3. Dopiero tu przybyï¿½em muszï¿½ siï¿½ rozejï¿½eï¿½, wtedy postanowiï¿½" << endl<<endl;
+		cout << "Myï¿½lï¿½ ï¿½e znajdï¿½ siï¿½ tu ciekawe rzeczy do zrobienia" << endl;
 		break;
 	default:break;
 	}
 
 	system("pause");
 	system("cls");
-	cout << "A w³aœnie..." << endl;
-	cout << "Jako ¿e jesteœ nowy w tej krainie muszê daæ Ci jakieœ zadanie sprawdzaj¹ce \nKtóre dowiedzie Twojej przydatnoœci" << endl;
-	cout << "Na zachód od miasta jest œcie¿ka, która prowadzi przez las \nNa koñcu tej œcie¿ki znajdziesz sporych rozmiarów wierzê" << endl;
-	cout << "Nie sposób jej omin¹æ \n\nChcia³bym abyœ zdoby³ dla nas pewien przedmiot znajduj¹cy siê na szczycie tej wierzy" << endl;
-	cout << "Jest to kamienny puchar, skradziony przez szalonego ch³opaka, który ukrywa siê w³aœnie w tej wierzy" << endl;
-	cout << "To nie powinno byæ trudne zadanie a Twoje umiejêtnoœci na pewno sprawi¹, ¿e \nszybko rozprawisz siê z rabusiem i dostarczysz skradziony przedmiot do mnie" << endl;
+	cout << "A wï¿½aï¿½nie..." << endl;
+	cout << "Jako ï¿½e jesteï¿½ nowy w tej krainie muszï¿½ daï¿½ Ci jakieï¿½ zadanie sprawdzajï¿½ce \nKtï¿½re dowiedzie Twojej przydatnoï¿½ci" << endl;
+	cout << "Na zachï¿½d od miasta jest ï¿½cieï¿½ka, ktï¿½ra prowadzi przez las \nNa koï¿½cu tej ï¿½cieï¿½ki znajdziesz sporych rozmiarï¿½w wierzï¿½" << endl;
+	cout << "Nie sposï¿½b jej ominï¿½ï¿½ \n\nChciaï¿½bym abyï¿½ zdobyï¿½ dla nas pewien przedmiot znajdujï¿½cy siï¿½ na szczycie tej wierzy" << endl;
+	cout << "Jest to kamienny puchar, skradziony przez szalonego chï¿½opaka, ktï¿½ry ukrywa siï¿½ wï¿½aï¿½nie w tej wierzy" << endl;
+	cout << "To nie powinno byï¿½ trudne zadanie a Twoje umiejï¿½tnoï¿½ci na pewno sprawiï¿½, ï¿½e \nszybko rozprawisz siï¿½ z rabusiem i dostarczysz skradziony przedmiot do mnie" << endl;
 	system("pause");
 	system("cls");
-	cout << "Oczywiœcie jesli chodzi o wyposa¿enie to mogê daæ Ci orê¿..." << endl<<endl;
+	cout << "Oczywiï¿½cie jesli chodzi o wyposaï¿½enie to mogï¿½ daï¿½ Ci orï¿½..." << endl<<endl;
 	if (charakter == 1) {
-		cout << "Zaraz, zaraz coœ tu znajdê dla wojownika..." << endl;
-		cout << "O proszê ten miecz na pewno powinien wystarczyæ" << endl;
+		cout << "Zaraz, zaraz coï¿½ tu znajdï¿½ dla wojownika..." << endl;
+		cout << "O proszï¿½ ten miecz na pewno powinien wystarczyï¿½" << endl;
 		system("pause");
 		system("cls");
-		cout << "Dostajesz du¿y wywa¿ony miecz o szerokim ostrzu i solidnej rêkojeœci"<<endl<<endl;
+		cout << "Dostajesz duï¿½y wywaï¿½ony miecz o szerokim ostrzu i solidnej rï¿½kojeï¿½ci"<<endl<<endl;
 		system("pause");
 		system("cls");
 	}
 	else if (charakter == 2) {
-		cout << "Zaraz, zaraz coœ tu znajdê dla zabojcy..." << endl;
-		cout << "O proszê te sztylety na pewno powinny wystarczyæ" << endl;
+		cout << "Zaraz, zaraz coï¿½ tu znajdï¿½ dla zabojcy..." << endl;
+		cout << "O proszï¿½ te sztylety na pewno powinny wystarczyï¿½" << endl;
 		system("pause");
 		system("cls");
-		cout << "Dostajesz standardowe sztylety z ca³kiem wygodnymi rêkojeœciami i ostrej klindze" << endl << endl;
+		cout << "Dostajesz standardowe sztylety z caï¿½kiem wygodnymi rï¿½kojeï¿½ciami i ostrej klindze" << endl << endl;
 		system("pause");
 		system("cls");
 	}
 	else if (charakter == 3) {
-		cout << "Zaraz, zaraz coœ tu znajdê dla palladyna..." << endl;
-		cout << "O proszê te miecz powinien wystarczyæ" << endl;
+		cout << "Zaraz, zaraz coï¿½ tu znajdï¿½ dla palladyna..." << endl;
+		cout << "O proszï¿½ te miecz powinien wystarczyï¿½" << endl;
 		system("pause");
 		system("cls");
-		cout << "Dostajesz krótki szeroki miecz legionisty... Przeciez wiara jest tw¹ najwiêksz¹ broni¹" << endl << endl;
+		cout << "Dostajesz krï¿½tki szeroki miecz legionisty... Przeciez wiara jest twï¿½ najwiï¿½kszï¿½ broniï¿½" << endl << endl;
 		system("pause");
 		system("cls");
 	}
 	
 	system("pause");
 	system("cls");
-	cout << "Nim dotar³em do opisanej przez stra¿nika lokacji zapad³ ju¿ wieczór \nEhh.. Szkoda ¿e nie wzi¹³em ze sob¹ pochodni \nW œrodku mo¿ê byæ ciemno. \nWierza by³a dosyæ wysoka, okoliczne tereny natomiast martwe. \nWszêdzie czuæ by³o zgnielizn¹..." << endl;
+	cout << "Nim dotarï¿½em do opisanej przez straï¿½nika lokacji zapadï¿½ juï¿½ wieczï¿½r \nEhh.. Szkoda ï¿½e nie wziï¿½ï¿½em ze sobï¿½ pochodni \nW ï¿½rodku moï¿½ï¿½ byï¿½ ciemno. \nWierza byï¿½a dosyï¿½ wysoka, okoliczne tereny natomiast martwe. \nWszï¿½dzie czuï¿½ byï¿½o zgnieliznï¿½..." << endl;
 	system("pause");
 	system("cls");
-	cout << "Dziwne... \nCokolwiek tu siê wydarzy³o wygl¹da to jakby wziê³o swój pocz¹tek od tej wierzy \nNo có¿ to nie czas na  zastanawianie siê nad przyczynami tej zarazy. \nPora ruszaæ w drogê!";
+	cout << "Dziwne... \nCokolwiek tu siï¿½ wydarzyï¿½o wyglï¿½da to jakby wziï¿½o swï¿½j poczï¿½tek od tej wierzy \nNo cï¿½ to nie czas na  zastanawianie siï¿½ nad przyczynami tej zarazy. \nPora ruszaï¿½ w drogï¿½!";
 	system("pause");
 	//sndPlaySound(L"mus.wav", SND_ASYNC);
 
@@ -238,10 +238,10 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 			if (cooldown == 1) {
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak podstawowy" << endl;
-				cout << "2. Potê¿ny atak! Cooldown 1 ture's" << endl;
+				cout << "2. Potï¿½ny atak! Cooldown 1 ture's" << endl;
 				wybor = _getch();
 				system("cls");
 				switch (wybor) {
@@ -250,14 +250,14 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero -= deff_monster;
 					cout << "Wykonujesz cios mieczem" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o zadaæ Ci siê ciosu!" << endl;
+						cout << "Nie udaï¿½o zadaï¿½ Ci siï¿½ ciosu!" << endl;
 						cooldown = 0;
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						cooldown = 0;
 						break;
 					}
@@ -266,7 +266,7 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
@@ -276,10 +276,10 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 			else {
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak podstawowy" << endl;
-				cout << "2. Potê¿ny atak!" << endl;
+				cout << "2. Potï¿½ny atak!" << endl;
 				wybor = _getch();
 				system("cls");
 				switch (wybor) {
@@ -288,13 +288,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero -= deff_monster;
 					cout << "Wykonujesz cios mieczem" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o zadaæ Ci siê ciosu!" << endl;
+						cout << "Nie udaï¿½o zadaï¿½ Ci siï¿½ ciosu!" << endl;
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						break;
 					}
 				case '2':
@@ -303,13 +303,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero -= deff_monster;
 					cout << "Wykonujesz niezwykle ryzykowny cios z wyskoku!" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o zadaæ Ci siê ciosu!" << endl;
+						cout << "Nie udaï¿½o zadaï¿½ Ci siï¿½ ciosu!" << endl;
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						break;
 					}
 				default:return fight(hero, monster);
@@ -317,13 +317,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
 				}
 			}			
-			cout << endl << "Wróg atakuje" << endl;
+			cout << endl << "Wrï¿½g atakuje" << endl;
 			attack_monster = monster.attack_monster();
 			hero.take_dmg(attack_monster);
 			hp_hero = hero.get_hp();
@@ -335,10 +335,10 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 			if (cooldown > 0) {
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak podstawowy" << endl;
-				cout << "2. Wiruj¹ce sztylety! Cooldown "<< cooldown << " ture's!" << endl;
+				cout << "2. Wirujï¿½ce sztylety! Cooldown "<< cooldown << " ture's!" << endl;
 				wybor = _getch();
 				system("cls");
 				switch (wybor) {
@@ -348,13 +348,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero -= deff_monster;
 					cout << "Wykonujesz szybki atak sztyletem" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o zadaæ Ci siê ciosu!" << endl;
+						cout << "Nie udaï¿½o zadaï¿½ Ci siï¿½ ciosu!" << endl;
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						break;
 					}
 				default:return fight(hero, monster);
@@ -363,7 +363,7 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
@@ -372,10 +372,10 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 			else {
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak podstawowy" << endl;
-				cout << "2. Wiruj¹ce sztylety" << endl;
+				cout << "2. Wirujï¿½ce sztylety" << endl;
 				wybor = _getch();
 				system("cls");
 				switch (wybor) {
@@ -384,36 +384,36 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero -= deff_monster;
 					cout << "Wykonujesz szybki atak sztyletem" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o zadaæ Ci siê ciosu!" << endl;
+						cout << "Nie udaï¿½o zadaï¿½ Ci siï¿½ ciosu!" << endl;
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						break;
 					}
 				case '2':
 					system("cls");
 					cooldown = 3;
-					cout << "Z niesamowit¹ zwinnoœci¹ wyrzucasz szybko trzy sztylety!" << endl;
+					cout << "Z niesamowitï¿½ zwinnoï¿½ciï¿½ wyrzucasz szybko trzy sztylety!" << endl;
 					for (int i = 0; i < 3; i++) {
 						attack_hero = 0;
 						attack_hero = hero.attack4();
 						attack_hero -= deff_monster;
 						if (attack_hero <= 0) {
 
-							cout << "Nó¿ nie trafi³!" << endl;
+							cout << "Nï¿½ nie trafiï¿½!" << endl;
 						}
 						else {
 							hp_monster -= attack_hero;
 							monster.take_dmg_monster(attack_hero);
-							cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
+							cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
 						}
 					}
 					break;
 				default:
-					cout << "Z³y przycisk!" << endl;
+					cout << "Zï¿½y przycisk!" << endl;
 					system("pause");
 					return fight(hero, monster);
 
@@ -421,13 +421,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
 				}
 			}
-			cout << endl << "Wróg atakuje" << endl;
+			cout << endl << "Wrï¿½g atakuje" << endl;
 			attack_monster = monster.attack_monster();
 			hero.take_dmg(attack_monster);
 			hp_hero = hero.get_hp();
@@ -435,12 +435,12 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 		}
 	}
 	else if (ch == 3) { // lecimy z palladynem 
-		while(hp_hero >= 0 || hp_monster >= 0) { // pêtlelka a¿ jeden padnie 
+		while(hp_hero >= 0 || hp_monster >= 0) { // pï¿½tlelka aï¿½ jeden padnie 
 			if (cooldown > 0) { // jest coodown to lecim
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak Podstawowy" << endl;
 				cout << "2. Wzmocnienie ataku, Cooldown: "<< cooldown << endl;
 				wybor = _getch();
@@ -450,18 +450,18 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 					attack_hero = hero.attack5();
 					attack_hero -= deff_monster;
 					
-					if (hero.GetBufInfo() == TRUE) cout << "Z uczuciem jakby œwiêty anio³ wykonywa³ z Tob¹ ruch mieczem"<< endl;
-					cout << "Wykonujesz precyzyjne ciêcie" << endl;
+					if (hero.GetBufInfo() == TRUE) cout << "Z uczuciem jakby ï¿½wiï¿½ty anioï¿½ wykonywaï¿½ z Tobï¿½ ruch mieczem"<< endl;
+					cout << "Wykonujesz precyzyjne ciï¿½cie" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o Ci siê zadaæ obra¿eñ!" << endl;
-						hero.buffoff(); // usuwamy buffa gdy¿ jest tylko jednorazowy :) 
+						cout << "Nie udaï¿½o Ci siï¿½ zadaï¿½ obraï¿½eï¿½!" << endl;
+						hero.buffoff(); // usuwamy buffa gdyï¿½ jest tylko jednorazowy :) 
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
-						hero.buffoff(); // usuwamy buffa gdy¿ jest tylko jednorazowy :) 
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
+						hero.buffoff(); // usuwamy buffa gdyï¿½ jest tylko jednorazowy :) 
 						break;
 	
 					}
@@ -470,7 +470,7 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
@@ -479,8 +479,8 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 			else { // jelsi nie ma cooldown to lecimy z koksem 
 				system("cls");
 				cout << "MENU WALKI" << endl << endl;
-				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktów ¯ycia!" << endl;
-				cout << "Twój przeciwnik posiada jeszcze " << hp_monster << endl << endl;
+				cout << "Posiadasz " << hp_hero <<"/"<< hp_max << " Punktï¿½w ï¿½ycia!" << endl;
+				cout << "Twï¿½j przeciwnik posiada jeszcze " << hp_monster << endl << endl;
 				cout << "1. Atak Podstawowy" << endl;
 				cout << "2. Wzmocnienie ataku" << endl;
 				wybor = _getch();
@@ -488,22 +488,22 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				case '1':
 					attack_hero = hero.attack5();
 					attack_hero -= deff_monster;
-					cout << "Wykonujesz precyzyjne ciêcie" << endl;
+					cout << "Wykonujesz precyzyjne ciï¿½cie" << endl;
 					if (attack_hero <= 0) {
-						cout << "Nie uda³o Ci siê zadaæ obra¿eñ!" << endl;
-						hero.buffoff(); // usuwamy buffa gdy¿ jest tylko jednorazowy :) 
+						cout << "Nie udaï¿½o Ci siï¿½ zadaï¿½ obraï¿½eï¿½!" << endl;
+						hero.buffoff(); // usuwamy buffa gdyï¿½ jest tylko jednorazowy :) 
 						break;
 					}
 					else {
 						hp_monster -= attack_hero;
 						monster.take_dmg_monster(attack_hero);
-						cout << "Zadajesz " << attack_hero << " obra¿eñ!" << endl;
-						hero.buffoff(); // usuwamy buffa gdy¿ jest tylko jednorazowy :) 
+						cout << "Zadajesz " << attack_hero << " obraï¿½eï¿½!" << endl;
+						hero.buffoff(); // usuwamy buffa gdyï¿½ jest tylko jednorazowy :) 
 						break;
 					}				
 				case '2':
-					hero.buffon(); // uruchamia siê buff :D
-					cout << "Po chwili modlitwy wzmacniasz czujesz nap³yw niesamowitej energi"<< endl << "Nastepny twój atak bêdzie potê¿niejszy"<< endl;
+					hero.buffon(); // uruchamia siï¿½ buff :D
+					cout << "Po chwili modlitwy wzmacniasz czujesz napï¿½yw niesamowitej energi"<< endl << "Nastepny twï¿½j atak bï¿½dzie potï¿½niejszy"<< endl;
 					cooldown = 2; // ustawiamy cooldown
 					break;
 				default:return fight(hero, monster);
@@ -511,13 +511,13 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 				if (hp_monster <= 0) {
 					system("pause");
 					system("cls");
-					cout << "Wróg pokonany!" << endl;
+					cout << "Wrï¿½g pokonany!" << endl;
 					system("pause");
 					hero.LevelUp(monster.GetExp());
 					break;
 				}
 			}
-			cout << endl << "Wróg atakuje" << endl;
+			cout << endl << "Wrï¿½g atakuje" << endl;
 			attack_monster = monster.attack_monster();
 			hero.take_dmg(attack_monster);
 			hp_hero = hero.get_hp();
@@ -527,40 +527,40 @@ void fight(Hero &hero, Monster &monster) { //funkcja walki z przeciwnikiem
 }	
 void tawer_v2(Hero &hero, Monster &monster) {
 	system("cls");
-	cout << "Pokonuj¹c schody docieram do kolejnego pomieszczenia" << endl;
-	cout << "Po przejœciu przez niewielkie drzwi \nz miejsca dobieg³ do mnie przeraŸliwy krzyk!" << endl;
-	cout << "Wielki zielony trol dostrzega mnie b³yskawicznie i atakuje!" << endl;
+	cout << "Pokonujï¿½c schody docieram do kolejnego pomieszczenia" << endl;
+	cout << "Po przejï¿½ciu przez niewielkie drzwi \nz miejsca dobiegï¿½ do mnie przeraï¿½liwy krzyk!" << endl;
+	cout << "Wielki zielony trol dostrzega mnie bï¿½yskawicznie i atakuje!" << endl;
 	monster.spown_monster(120, 33, 5, 50, 55, "Trol");
 	fight(hero,monster);
 	system("cls");
-	cout << "Uff uda³o mi siê na szczêœcie pokonaæ zagro¿enie.."<<endl;
-	cout << "Sk¹d tu siê bior¹ takie stwory? \nZ t¹ wierz¹ jest coœ totalnie nie tak" << endl;
-	cout << endl << "Przygl¹dajac siê pomieszczeniu w którym siê znalaz³em \nDostrzeg³em coœ na kszta³t jadalni." << endl;
-	cout << "Wielki stó³ nakryty obfitoœciami, owoce, wyszukane miêsa i wino \nWszystko wygl¹da na œwie¿e." << endl;
-	cout << "W dodatku œwiat³o œwiec nadaje piêkny klimat temu miejscu \nSufit to wspania³a kopu³a na której ktoœ umieœcil niemal¿e boski fresk" << endl;
-	cout << "I przepiêkne okienne witra¿e z wizerunkami nagich kobiet i mêrzczyzn \npodczas aktów seksualnych." << endl;
-	cout << endl << "Coraz bardziej zaczyna mnie zastanawiaæ co to jest za miejsce ?!" << endl;
+	cout << "Uff udaï¿½o mi siï¿½ na szczï¿½cie pokonaï¿½ zagroï¿½enie.."<<endl;
+	cout << "Skï¿½d tu siï¿½ biorï¿½ takie stwory? \nZ tï¿½ wierzï¿½ jest coï¿½ totalnie nie tak" << endl;
+	cout << endl << "Przyglï¿½dajac siï¿½ pomieszczeniu w ktï¿½rym siï¿½ znalazï¿½em \nDostrzegï¿½em coï¿½ na ksztaï¿½t jadalni." << endl;
+	cout << "Wielki stï¿½ nakryty obfitoï¿½ciami, owoce, wyszukane miï¿½sa i wino \nWszystko wyglï¿½da na ï¿½wieï¿½e." << endl;
+	cout << "W dodatku ï¿½wiatï¿½o ï¿½wiec nadaje piï¿½kny klimat temu miejscu \nSufit to wspaniaï¿½a kopuï¿½a na ktï¿½rej ktoï¿½ umieï¿½cil niemalï¿½e boski fresk" << endl;
+	cout << "I przepiï¿½kne okienne witraï¿½e z wizerunkami nagich kobiet i mï¿½rzczyzn \npodczas aktï¿½w seksualnych." << endl;
+	cout << endl << "Coraz bardziej zaczyna mnie zastanawiaï¿½ co to jest za miejsce ?!" << endl;
 	system("pause");
 	system("cls");
-	cout << "W chwili gdy siêga³em ju¿ po jab³uko dostrzeg³em kantem oka ¿e coœ poruszy³o siê w fotelu pod œcianom." << endl;
-	cout << endl << "By³a to nie¿no blada postaæ z czerwonymi œlepiami. \nUsta mia³a sine, w³osy ledwo widczne. \nPaznokcie u r¹k d³ugie jak szpile, wygl¹daj¹ jakby bez problemu mog³y przeci¹æ skurzan¹ zbrojê!" << endl;
-	cout << "Postaæ wpatrywa³a siê we mnie œwidruj¹cym wzrokiem, \nktóry przeszywa³ mnie niczym jad wê¿a krwioobieg swej ofiary" << endl;
-	cout << "By³em totalnie sparari¿owany, ledwo oddycha³em \na postaæ w dziwny nieludzki sposób przesunê³a siê do mnie \nten ruch by³ praktycznie bezszelestn pozbawiony jakichkolwiek emocji." << endl;
-	cout << endl << "Patrzy³ mi prosto w oczy! \nZuwa¿y³em jak lekko przesówa siê k¹cik ust ów stwora w suptelny uœmiech" << endl;
-	cout << "Po chwili jednak oddali³ siê i znikn¹³ za drzwiami \nJeszcze przez chwilê nie mog³em siê ruszaæ" << endl;
-	cout << endl << "W g³owie rodzi³y mi siê pytania... \nPytania bez odpowiedzi!\nW co ja zosta³em wci¹gniêty..." << endl;
+	cout << "W chwili gdy siï¿½gaï¿½em juï¿½ po jabï¿½uko dostrzegï¿½em kantem oka ï¿½e coï¿½ poruszyï¿½o siï¿½ w fotelu pod ï¿½cianom." << endl;
+	cout << endl << "Byï¿½a to nieï¿½no blada postaï¿½ z czerwonymi ï¿½lepiami. \nUsta miaï¿½a sine, wï¿½osy ledwo widczne. \nPaznokcie u rï¿½k dï¿½ugie jak szpile, wyglï¿½dajï¿½ jakby bez problemu mogï¿½y przeciï¿½ï¿½ skurzanï¿½ zbrojï¿½!" << endl;
+	cout << "Postaï¿½ wpatrywaï¿½a siï¿½ we mnie ï¿½widrujï¿½cym wzrokiem, \nktï¿½ry przeszywaï¿½ mnie niczym jad wï¿½a krwioobieg swej ofiary" << endl;
+	cout << "Byï¿½em totalnie sparariï¿½owany, ledwo oddychaï¿½em \na postaï¿½ w dziwny nieludzki sposï¿½b przesunï¿½a siï¿½ do mnie \nten ruch byï¿½ praktycznie bezszelestn pozbawiony jakichkolwiek emocji." << endl;
+	cout << endl << "Patrzyï¿½ mi prosto w oczy! \nZuwaï¿½yï¿½em jak lekko przesï¿½wa siï¿½ kï¿½cik ust ï¿½w stwora w suptelny uï¿½miech" << endl;
+	cout << "Po chwili jednak oddaliï¿½ siï¿½ i zniknï¿½ï¿½ za drzwiami \nJeszcze przez chwilï¿½ nie mogï¿½em siï¿½ ruszaï¿½" << endl;
+	cout << endl << "W gï¿½owie rodziï¿½y mi siï¿½ pytania... \nPytania bez odpowiedzi!\nW co ja zostaï¿½em wciï¿½gniï¿½ty..." << endl;
 	system("pause");
 	system("cls");
-	cout << "Me serce jeszcze przez d³u¿sz¹ chwilê chcia³o wyrwaæ siê z objêæ klatki piersiowej"<<endl;
-	cout << "No nic kilka g³êbszych wdechów powietrza i pora siê otrz¹sn¹æ"<< endl;
-	cout << "Nic mi nie da u¿alanie siê nad sob¹ albo co gorsza panikowanie... \nMuszê twardo st¹paæ po ziemi by nie skoñczyæ martwym!"<< endl;
-	cout << "Drzwi za mna ju¿ dawno siê zamknê³y i coœ... \nCoœ jakby pcha³o mnie dalej, bym wszed³ g³êbiej."<<endl;
-	cout << "A mo¿e drzwi nigdy siê nie zamknê³y tylko to mój umys³ pragnie bym szed³ dalej?"<<endl;
-	cout << "Pytanie to pojawi³o siê w mojej g³owie z nik¹d \nBy w mgnieniu oka zmieniæ siê w dobry dowcip"<<endl;
-	cout << "Znowu da³em sie namówiæ na jak¹œ dziwn¹ akcjê, która co gorsza mo¿e staæ siê moj¹ ostatni¹!"<<endl;
+	cout << "Me serce jeszcze przez dï¿½uï¿½szï¿½ chwilï¿½ chciaï¿½o wyrwaï¿½ siï¿½ z objï¿½ï¿½ klatki piersiowej"<<endl;
+	cout << "No nic kilka gï¿½ï¿½bszych wdechï¿½w powietrza i pora siï¿½ otrzï¿½snï¿½ï¿½"<< endl;
+	cout << "Nic mi nie da uï¿½alanie siï¿½ nad sobï¿½ albo co gorsza panikowanie... \nMuszï¿½ twardo stï¿½paï¿½ po ziemi by nie skoï¿½czyï¿½ martwym!"<< endl;
+	cout << "Drzwi za mna juï¿½ dawno siï¿½ zamknï¿½y i coï¿½... \nCoï¿½ jakby pchaï¿½o mnie dalej, bym wszedï¿½ gï¿½ï¿½biej."<<endl;
+	cout << "A moï¿½e drzwi nigdy siï¿½ nie zamknï¿½y tylko to mï¿½j umysï¿½ pragnie bym szedï¿½ dalej?"<<endl;
+	cout << "Pytanie to pojawiï¿½o siï¿½ w mojej gï¿½owie z nikï¿½d \nBy w mgnieniu oka zmieniï¿½ siï¿½ w dobry dowcip"<<endl;
+	cout << "Znowu daï¿½em sie namï¿½wiï¿½ na jakï¿½ï¿½ dziwnï¿½ akcjï¿½, ktï¿½ra co gorsza moï¿½e staï¿½ siï¿½ mojï¿½ ostatniï¿½!"<<endl;
 	system("pause");
 	system("cls");
-	cout << "Przedemn¹ oblrzymie drzwi prowadz¹ce do jakiegoœ pomieszczenia ";
+	cout << "Przedemnï¿½ oblrzymie drzwi prowadzï¿½ce do jakiegoï¿½ pomieszczenia ";
 }
 void tawer_start(Hero &hero, Monster &monster, Quest &zadanie) {
 	char p1, p2, p3;
@@ -569,27 +569,27 @@ void tawer_start(Hero &hero, Monster &monster, Quest &zadanie) {
 
 	while (true) {
 		if (visited2 > 0) {
-			cout << "Znajdujesz siê ponownie w pierwszym pomieszczeniu nic siê tu nie zmieni³o" << endl << endl;
+			cout << "Znajdujesz siï¿½ ponownie w pierwszym pomieszczeniu nic siï¿½ tu nie zmieniï¿½o" << endl << endl;
 		}
 		else {
 
-			cout << "Wchodz¹c do œrodka us³ysza³em zatrzaskuj¹ce siê za mn¹ drzwi \nDostaæ siê do œrodka by³o ³atwo z wydostaniem ju¿ chyba tak nie bêdzie..." << endl;
+			cout << "Wchodzï¿½c do ï¿½rodka usï¿½yszaï¿½em zatrzaskujï¿½ce siï¿½ za mnï¿½ drzwi \nDostaï¿½ siï¿½ do ï¿½rodka byï¿½o ï¿½atwo z wydostaniem juï¿½ chyba tak nie bï¿½dzie..." << endl;
 			system("pause");
 			system("cls");
 		}
 
 		visited2++;
 
-		cout << "Du¿y pokój wype³niony stêch³ym powietrzem i dwoje drzwi \nCo tu robiæ?" << endl << endl;
-		cout << "1. WejdŸ w drzwi po prawej" << endl;
-		cout << "2. WejdŸ w drzwi po lewej" << endl;
-		cout << "3. Poka¿ statystyki" << endl;
+		cout << "Duï¿½y pokï¿½j wypeï¿½niony stï¿½chï¿½ym powietrzem i dwoje drzwi \nCo tu robiï¿½?" << endl << endl;
+		cout << "1. Wejdï¿½ w drzwi po prawej" << endl;
+		cout << "2. Wejdï¿½ w drzwi po lewej" << endl;
+		cout << "3. Pokaï¿½ statystyki" << endl;
 		p1 = _getch();
 		switch (p1) {
 		case '1':
-			cout << endl << "Widzê schody na górê" << endl << endl;
-			cout << "1. Wchodzê!" << endl;
-			cout << "2. Mam tu jeszcze coœ do zbadania" << endl;
+			cout << endl << "Widzï¿½ schody na gï¿½rï¿½" << endl << endl;
+			cout << "1. Wchodzï¿½!" << endl;
+			cout << "2. Mam tu jeszcze coï¿½ do zbadania" << endl;
 			p2 = _getch();
 			switch (p2) {
 			case '1':
@@ -602,24 +602,24 @@ void tawer_start(Hero &hero, Monster &monster, Quest &zadanie) {
 			break;
 		case '2':
 			if (visited > 0) {
-				cout << endl << "Pokój juz odwiedzony nic poza wspania³¹ piwniczk¹ nie pozosta³o tu do zobaczenia" << endl;
+				cout << endl << "Pokï¿½j juz odwiedzony nic poza wspaniaï¿½ï¿½ piwniczkï¿½ nie pozostaï¿½o tu do zobaczenia" << endl;
 				system("pause");
 				break;
 			}
 			else {
 				visited++;
-				cout << endl << "W pomieszczeniu panuje ciemnoœæ, na szczêœcie na stoliku jest kaganek \nobok którego znajduje siê krzesiwo" << endl;
-				cout << "Po rozpaelniu œwiat³a dostrzedz mo¿na majestat tej sali \njest to swoista piwniczka z nielda ma³ym asortymentem róznych beczuszek i beczek pouk³adanych starannie na rega³ach" << endl;
+				cout << endl << "W pomieszczeniu panuje ciemnoï¿½ï¿½, na szczï¿½cie na stoliku jest kaganek \nobok ktï¿½rego znajduje siï¿½ krzesiwo" << endl;
+				cout << "Po rozpaelniu ï¿½wiatï¿½a dostrzedz moï¿½na majestat tej sali \njest to swoista piwniczka z nielda maï¿½ym asortymentem rï¿½znych beczuszek i beczek poukï¿½adanych starannie na regaï¿½ach" << endl;
 				system("pause");
 				system("cls");
-				cout << "Nagle z pomiedzy rega³ów wy³ania siê postaæ \nNie zadu¿a, zgarbiona. Przypominaj¹ca trochê dziecko \nSkierowawszy w jej stronê kaganek okaza³o siê, ¿e to goblin z doœæ pokaŸna ran¹ w g³owie \nRana wygl¹da na star¹ i ju¿ zaczyna powoli gniæ" << endl << endl;
-				cout << "Niestety dyplomacja nie ma tu jakiegokolwiek znaczenia \nBiedne stworzenie rusza szar¿¹ wymachuj¹c pa³¹!" << endl;
+				cout << "Nagle z pomiedzy regaï¿½ï¿½w wyï¿½ania siï¿½ postaï¿½ \nNie zaduï¿½a, zgarbiona. Przypominajï¿½ca trochï¿½ dziecko \nSkierowawszy w jej stronï¿½ kaganek okazaï¿½o siï¿½, ï¿½e to goblin z doï¿½ï¿½ pokaï¿½na ranï¿½ w gï¿½owie \nRana wyglï¿½da na starï¿½ i juï¿½ zaczyna powoli gniï¿½" << endl << endl;
+				cout << "Niestety dyplomacja nie ma tu jakiegokolwiek znaczenia \nBiedne stworzenie rusza szarï¿½ï¿½ wymachujï¿½c paï¿½ï¿½!" << endl;
 				system("pause");
 				monster.spown_monster(50, 25, 4, 60, 130, "Goblin");
 				fight(hero, monster);
 				system("cls");
-				cout << "Na szczêœcie z ³atwoœci¹ uda³o mi siê pokonaæ tego zawodnika" << endl << endl;
-				cout << "Po dok³adniejszym przygl¹dniêciu siê piwnicznce zauwa¿y³em \ndzbany i odkorkowan¹ beczkê. \nKilka g³êbszych na pewno nie zaszkodzi!" << endl;
+				cout << "Na szczï¿½cie z ï¿½atwoï¿½ciï¿½ udaï¿½o mi siï¿½ pokonaï¿½ tego zawodnika" << endl << endl;
+				cout << "Po dokï¿½adniejszym przyglï¿½dniï¿½ciu siï¿½ piwnicznce zauwaï¿½yï¿½em \ndzbany i odkorkowanï¿½ beczkï¿½. \nKilka gï¿½ï¿½bszych na pewno nie zaszkodzi!" << endl;
 				hero.heal(50);
 				system("pause");
 				system("cls");
@@ -629,7 +629,7 @@ void tawer_start(Hero &hero, Monster &monster, Quest &zadanie) {
 				hero.show_stats();
 				break;
 		default:
-			cout << "Niepoprawny wybór!" << endl;
+			cout << "Niepoprawny wybï¿½r!" << endl;
 			system("pause");
 			return tawer_start(hero,monster,zadanie);
 		}

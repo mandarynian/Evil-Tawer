@@ -1,15 +1,15 @@
 #include <stdafx.h>
-#include "ogolnie.h"
+#include "resource.h"
 #include "Monster.h"
-//metody oraz funkcje powi¹zane z klas¹ Monster
+//metody oraz funkcje powiï¿½zane z klasï¿½ Monster
 
 Monster::Monster(int h, int a, int d, int agi, int exp, string n) {
 	hp = h, attack = a, def = d, agility = agi, exp_give = exp, name = n;
 }
 void Monster::show() {
 	setlocale(LC_ALL, "polish");
-	cout << "Pojawia siê " << name << "\nwartoœæ jego punktów ¿ycia to :" << hp<<endl;
-	cout << "staty drania: " << agility << " zrêcznoœci, " << attack << " ataku, " << def << " defa!" << endl;
+	cout << "Pojawia siï¿½ " << name << "\nwartoï¿½ï¿½ jego punktï¿½w ï¿½ycia to :" << hp<<endl;
+	cout << "staty drania: " << agility << " zrï¿½cznoï¿½ci, " << attack << " ataku, " << def << " defa!" << endl;
 }
 
 void Monster::spown_monster(int h, int a, int d, int agi, int e, string n) {
@@ -17,12 +17,12 @@ void Monster::spown_monster(int h, int a, int d, int agi, int e, string n) {
 	hp = h, attack = a, def = d, agility = agi, exp_give = e, name = n;
 	system("pause");
 	system("cls");
-	cout << "Atakuje Ciê: " << name << endl;
-	cout << "Posiada on: " << hp << " punktów ¿ycia" << endl;
+	cout << "Atakuje Ciï¿½: " << name << endl;
+	cout << "Posiada on: " << hp << " punktï¿½w ï¿½ycia" << endl;
 	cout << "Oraz: " << attack << " ataku i " << def << " obrony" << endl;
 	system("pause");
 }
-// metody pobieraj¹ce ró¿ne statystyki klasy monster 
+// metody pobierajï¿½ce rï¿½ne statystyki klasy monster 
 int Monster::get_hp_monst() {
 	return hp;
 }

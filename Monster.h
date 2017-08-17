@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "ogolnie.h"
+#include "resource.h"
 
 class Monster {
 	int hp, attack, def, agility, exp_give;
@@ -15,6 +15,6 @@ public:
 	int get_def_mons();
 	int get_agil_mons();
 	int attack_monster();
-	int GetExp(); // zwraca nam iloœæ zdobytego expa 
+	int GetExp(); // zwraca nam iloï¿½ï¿½ zdobytego expa 
 	void take_dmg_monster(int);
 };

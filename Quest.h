@@ -1,10 +1,10 @@
 #include "stdafx.h"
-#include "ogolnie.h"
+#include "resource.h"
 #include "Hero.h"
 
 class Hero;
 class Monster;
-// klasa zapewniaj¹ca mo¿³iwoœæ zbierania questów od napotkanych npc 
+// klasa zapewniajï¿½ca moï¿½ï¿½iwoï¿½ï¿½ zbierania questï¿½w od napotkanych npc 
 class Quest : public Hero {
 public:
 		string* QuestList; // nazwa questa

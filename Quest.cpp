@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Quest.h"
-#include "ogolnie.h"
-// metody klassy quest odpowiedzialnej za przechowywanie poszczególnych zadañ :-)
+#include "resource.h"
+// metody klassy quest odpowiedzialnej za przechowywanie poszczegï¿½lnych zadaï¿½ :-)
 Quest::Quest() { 
 	QuestList = new string[5];
 	Reset();
@@ -12,10 +12,10 @@ Quest::~Quest() {
 void Quest::AddQuest(string n, int id) {
 	QuestList[id] = n;
 }
-void Quest::LoadQuest() { // wypisiwanie listy questów na ekran 
+void Quest::LoadQuest() { // wypisiwanie listy questï¿½w na ekran 
 	int IdQ = 1;
 	system("cls");
-	cout << "Lista Questów:" << endl << endl;
+	cout << "Lista Questï¿½w:" << endl << endl;
 	for (int i = 0;i < 5;i++) {
 		if (QuestList[i] == "-") {}
 		else {

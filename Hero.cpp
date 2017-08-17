@@ -1,8 +1,8 @@
-/* metody i powi¹zane z klas¹ Hero funkcjes */
+/* metody i powiï¿½zane z klasï¿½ Hero funkcjes */
 /* */
 
 #include <stdafx.h>
-#include "ogolnie.h"
+#include "resource.h"
 #include "Hero.h"
 Hero::Hero(string n, int h, int hp_m, int a, int d, int c,int agi, int eg, int et, int, bool buf) {
 	name = n;
@@ -11,7 +11,7 @@ Hero::Hero(string n, int h, int hp_m, int a, int d, int c,int agi, int eg, int e
 	buff = buf;
 }
 Hero::~Hero() {
-	cout << "Hahahaha" << endl; //no nie wiem destruktywny œmiech 
+	cout << "Hahahaha" << endl; //no nie wiem destruktywny ï¿½miech 
 }
 void Hero::load() {
 	for (;;) {
@@ -29,7 +29,7 @@ void Hero::load() {
 			exp_go = 0;
 			exp_to = 100;
 
-			cout << "Jak Ci na imiê?: "; cin >> name;
+			cout << "Jak Ci na imiï¿½?: "; cin >> name;
 			break;
 		case '2':
 			hp = 120;
@@ -41,7 +41,7 @@ void Hero::load() {
 			exp_go = 0;
 			exp_to = 100;
 
-			cout << "Jak Ci na imiê?: "; cin >> name;
+			cout << "Jak Ci na imiï¿½?: "; cin >> name;
 			break;
 		case '3':
 			hp = 140;
@@ -53,7 +53,7 @@ void Hero::load() {
 			exp_go = 0;
 			exp_to = 100;
 
-			cout << "Jak Ci na imiê?: "; cin >> name;
+			cout << "Jak Ci na imiï¿½?: "; cin >> name;
 			break;
 		default:
 			cout << "Niepoprawny wybor!" << endl;
@@ -67,26 +67,26 @@ void Hero::load() {
 }
 void Hero::show() {
 	setlocale(LC_ALL, "polish");
-	cout << "Witaj w Czarnej Zatoce przybyszu! \nZ dokumentów wynika, ¿e przybyles ze wschodnich stepow...\nNazywasz siê " << name << " i jesteœ ";
+	cout << "Witaj w Czarnej Zatoce przybyszu! \nZ dokumentï¿½w wynika, ï¿½e przybyles ze wschodnich stepow...\nNazywasz siï¿½ " << name << " i jesteï¿½ ";
 	if (charakter == 1) {
-		cout << "wojownikiem! \nWydaje mi siê ¿e bêdziesz w stanie nam pomóc \nPozwól jeszcze ¿e zadam Ci kilka pytañ." << endl;
+		cout << "wojownikiem! \nWydaje mi siï¿½ ï¿½e bï¿½dziesz w stanie nam pomï¿½c \nPozwï¿½l jeszcze ï¿½e zadam Ci kilka pytaï¿½." << endl;
 		cout << "To rutynowe pytania..." << endl;
 		system("pause");
 		droga(name, charakter);
 	}
 	else if (charakter == 2) {
-		cout << "Zabójca! \nTwoja profesja mo¿e siê nam przydaæ \nUwazaj jednak by nie wpasc w klopoty prawne!" << endl;
+		cout << "Zabï¿½jca! \nTwoja profesja moï¿½e siï¿½ nam przydaï¿½ \nUwazaj jednak by nie wpasc w klopoty prawne!" << endl;
 		system("pause");
 		droga(name, charakter);
 	}
 	else if (charakter == 3) {
-		cout << "Paladynem \nOh Twa madroœæ i wiara z pewnoœci¹ bêdzie przydatna w naszej krainie!" << endl;
+		cout << "Paladynem \nOh Twa madroï¿½ï¿½ i wiara z pewnoï¿½ciï¿½ bï¿½dzie przydatna w naszej krainie!" << endl;
 		system("pause");
 		droga(name, charakter);
 	}
 
 }
-// do zwracania statusów
+// do zwracania statusï¿½w
 int Hero::get_ch() {
 	return charakter;
 }
@@ -112,7 +112,7 @@ bool Hero::GetBufInfo() {
 void Hero::heal(int h) { 
 	if ((hp + h) > hp_max) {
 		hp = hp_max;
-		cout << "Czujesz siê wysmienicie \nTwoje pkt. zdrowia osi¹gaj¹ maximum!"<<endl;
+		cout << "Czujesz siï¿½ wysmienicie \nTwoje pkt. zdrowia osiï¿½gajï¿½ maximum!"<<endl;
 		system("pause");
 	}
 	else {
@@ -128,23 +128,23 @@ void Hero::take_dmg(int dmg) {
 		system("pause");
 	}
 	else if (dmg > 0) {
-		cout << "Otrzymujesz " << dmg << "! Obra¿eñ" << endl;
+		cout << "Otrzymujesz " << dmg << "! Obraï¿½eï¿½" << endl;
 		hp = hp - dmg;
 		system("pause");
 	}
 	if (hp <= 0) {
-		cout << "Zostajesz pokonany. Twój wysi³ek na pewno nie pójdzie na marne!" << endl;
+		cout << "Zostajesz pokonany. Twï¿½j wysiï¿½ek na pewno nie pï¿½jdzie na marne!" << endl;
 		system("pause");
 		exit(0);
 	}
 		
 }
-// metoda pozwalaj¹ca nam levelowaæ 
-void Hero::LevelUp(int exp) { // metoda zapewniaj¹ca rozwój postaci :) 
+// metoda pozwalajï¿½ca nam levelowaï¿½ 
+void Hero::LevelUp(int exp) { // metoda zapewniajï¿½ca rozwï¿½j postaci :) 
 	int perki = 10;
 	char addPerk;
 	exp_go += exp;
-	cout << "Zdobywasz: " << exp << " punktów expa!" << endl;
+	cout << "Zdobywasz: " << exp << " punktï¿½w expa!" << endl;
 	if (exp_go >= exp_to) {
 		exp_go = 0;
 		exp_to += 50;
@@ -152,12 +152,12 @@ void Hero::LevelUp(int exp) { // metoda zapewniaj¹ca rozwój postaci :)
 		if (charakter == 1) hp,hp_max += 50;
 		else if (charakter == 2) hp,hp_max +=20;
 		else hp,hp_max += 40;
-		cout << "Level Up! Gratulacjê osi¹gniêto kolejny level"<<endl;
+		cout << "Level Up! Gratulacjï¿½ osiï¿½gniï¿½to kolejny level"<<endl;
 		system("pause");
 		while (perki > 0) {
 			system("cls");
-			cout << "Masz do rozdania " << perki << " punktów, dziel je m¹drze :)"<<endl;
-			cout<<endl<< "1.Zwiêksz atak: "<<attack<<endl<< "2.Zwiêksz defensywê: "<<def<<endl<<"3.Zwiêksz zrêcznoœæ "<<agility<<endl;
+			cout << "Masz do rozdania " << perki << " punktï¿½w, dziel je mï¿½drze :)"<<endl;
+			cout<<endl<< "1.Zwiï¿½ksz atak: "<<attack<<endl<< "2.Zwiï¿½ksz defensywï¿½: "<<def<<endl<<"3.Zwiï¿½ksz zrï¿½cznoï¿½ï¿½ "<<agility<<endl;
 			addPerk = _getch();
 			switch (addPerk) {
 				case '1':
@@ -176,8 +176,8 @@ void Hero::LevelUp(int exp) { // metoda zapewniaj¹ca rozwój postaci :)
 			}
 		}
 		system("cls");
-		cout << "Rozda³eœ wszystkie punkty!"<<endl;
-		cout<<endl<< "Atak: "<<attack<<endl<< "Defensywa: "<<def<<endl<<"Zrêcznoœæ "<<agility<<endl;
+		cout << "Rozdaï¿½eï¿½ wszystkie punkty!"<<endl;
+		cout<<endl<< "Atak: "<<attack<<endl<< "Defensywa: "<<def<<endl<<"Zrï¿½cznoï¿½ï¿½ "<<agility<<endl;
 		system("pause");
 		system("cls");
 	}
@@ -198,7 +198,7 @@ int Hero::attack1() { // atak podstawowy wojownika
 	} else return 0;
 }
 
-int Hero::attack2() { // potê¿ny atak
+int Hero::attack2() { // potï¿½ny atak
 	srand(time(NULL));
 	int dmg_h;
 	long los;
@@ -231,7 +231,7 @@ int Hero::attack3() { // atak sztyletem
 	}
 	else return 0;
 }
-int Hero::attack4() { // wiruj¹ce sztylety 
+int Hero::attack4() { // wirujï¿½ce sztylety 
 	srand(time(NULL));
 	int dmg_h;
 	long los;
@@ -284,7 +284,7 @@ int Hero::attack5() { // podstawowy atak paladyna
 	}	
 }
 void Hero::buffon() {
-	buff = TRUE; // ustawiam buff na true by mo¿na by³o aktywowaæ moc b³ogos³awieñstwa palladyna :D 
+	buff = TRUE; // ustawiam buff na true by moï¿½na byï¿½o aktywowaï¿½ moc bï¿½ogosï¿½awieï¿½stwa palladyna :D 
 }
 void Hero::buffoff() { // odpalamy buffa 
 	buff = FALSE;
@@ -293,16 +293,16 @@ void Hero::buffoff() { // odpalamy buffa
 void Hero::show_stats() {
 	system("cls");
 	cout << "Statystyki: " << endl<<endl;
-	cout << "Imê: " << name << endl;
+	cout << "Imï¿½: " << name << endl;
 	if (charakter == 1) cout << "Klas: Wojownik"<<endl;
-	else if (charakter == 2) cout << "Klas: Zabójca"<<endl;
+	else if (charakter == 2) cout << "Klas: Zabï¿½jca"<<endl;
 	else cout<<"Klasa: Paladyn"<<endl;
 	cout<<"Level: "<<lvl<<endl;
-	cout << exp_go<<"/"<<exp_to<<" Punktów Doœwiadczenia"<<endl;
-	cout << hp << "/" << hp_max << " Punktów ¯ycia" << endl;
+	cout << exp_go<<"/"<<exp_to<<" Punktï¿½w Doï¿½wiadczenia"<<endl;
+	cout << hp << "/" << hp_max << " Punktï¿½w ï¿½ycia" << endl;
 	cout << attack << " Punkty Ataku"<< endl;
-	cout << def << " Punktów Obrony" << endl;
-	cout << agility << " Punktów Zrêcznoœci" << endl;
+	cout << def << " Punktï¿½w Obrony" << endl;
+	cout << agility << " Punktï¿½w Zrï¿½cznoï¿½ci" << endl;
 	system("pause");
 	system("cls");
 }

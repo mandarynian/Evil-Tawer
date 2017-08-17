@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "ogolnie.h"
+#include "resource.h"
 
 
 class Hero {
@@ -28,10 +28,10 @@ public:
 	void take_dmg(int);//zadawanie ran bohaterowi
 	int attack1(); //atak wojownika standardowy
 	int attack2(); //atak wojownika wzmocniony
-	int attack3();//atak zabójcy podstawowoy
+	int attack3();//atak zabï¿½jcy podstawowoy
 	int attack4(); //atak zab wzmocniny
 	int attack5(); // podstaowy atak paladyna 
 	void buffon(); // odpalamy buff palladyna
-	void buffoff(); // wy³¹czamy buff palladyna 
+	void buffoff(); // wyï¿½ï¿½czamy buff palladyna 
 	void LevelUp(int);
 };
