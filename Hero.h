@@ -34,4 +34,7 @@ public:
 	void buffon(); // odpalamy buff palladyna
 	void buffoff(); // wy��czamy buff palladyna 
 	void LevelUp(int);
+
+
+	virtual void AddSomeExp(int exp) { exp_go += exp; }
 };
